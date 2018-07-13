@@ -47,7 +47,7 @@
             this.start_button.BackColor = System.Drawing.Color.Red;
             this.start_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.start_button.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.start_button.Location = new System.Drawing.Point(317, 194);
+            this.start_button.Location = new System.Drawing.Point(307, 194);
             this.start_button.Name = "start_button";
             this.start_button.Size = new System.Drawing.Size(161, 56);
             this.start_button.TabIndex = 0;
