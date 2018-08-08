@@ -27,13 +27,14 @@ namespace CPU__Bench
 
         private void start_button_Click(object sender, EventArgs e)
         {
+            start_button.Enabled = false;
             load_panel.BringToFront();
             backgroundWorker1.RunWorkerAsync();
         }
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
-            System.Threading.Thread.Sleep(5000);
+            //test to be done
         }
 
         private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
