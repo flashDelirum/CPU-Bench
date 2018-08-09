@@ -13,6 +13,7 @@ namespace CPU__Bench
 {
     public partial class Form1 : Form
     {
+        int score = 0;
         public Form1()
         {
             InitializeComponent();
@@ -33,13 +34,22 @@ namespace CPU__Bench
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
-            //test to be done
+            //prime number test
+
+            Stopwatch w = new Stopwatch();
+            w.Start();
+            for (int i = 2; i < 100000; i++)
+                for (int x = i - 1; x > 1; x--)
+                    if (i % x == 0)
+                        break;
+            w.Stop();
+
+            score = (int)w.ElapsedMilliseconds;
         }
 
         private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            Random r = new Random();
-            result_label.Text = "" + r.Next(1000, 9999);
+            result_label.Text = "" + 100000000 / score;
             result_panel.BringToFront();
         }
     }
